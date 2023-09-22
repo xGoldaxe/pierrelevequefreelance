@@ -1,0 +1,40 @@
+$sliderDuration: 40s;
+
+.slider {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+
+	&__elements {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.first {
+		animation: $sliderDuration linear firstSlide infinite;
+	}
+
+	.second {
+		animation: $sliderDuration linear secondSlide infinite;
+		position: absolute;
+	}
+}
+
+@keyframes firstSlide {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes secondSlide {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
