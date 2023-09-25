@@ -172,11 +172,11 @@ export default function Home() {
           <div className="prestations_content">
             <div className="prestations_content_column">
               <h2 className={syne.className}>Photo d entreprise</h2>
+              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
+              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
+              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
+              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
             </div>
-              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
-              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
-              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
-              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
           </div>
           <div className="prestations_tiles">
             <div className="prestations_tiles_tile">
