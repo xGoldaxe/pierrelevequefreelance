@@ -158,8 +158,8 @@ export default function Home() {
             <li>Corporate</li>
             <li>Clip musical</li>
             <li>Montage</li>
-            <li>Photo d'entreprise</li>
-            <li>Photo d'événements</li>
+            <li>Photo d entreprise</li>
+            <li>Photo d événements</li>
           </ul>
           <div className="prestations_cover">
            <Image
@@ -171,12 +171,12 @@ export default function Home() {
           </div>
           <div className="prestations_content">
             <div className="prestations_content_column">
-              <h2 className={syne.className}>Photo d'entreprise</h2>
-              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
-              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
-              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
-              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
+              <h2 className={syne.className}>Photo d entreprise</h2>
             </div>
+              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
+              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
+              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
+              <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
           </div>
           <div className="prestations_tiles">
             <div className="prestations_tiles_tile">
@@ -250,7 +250,7 @@ export default function Home() {
         <div className="emphasedSection_content">
           <h3>Racontez</h3>
           <h4>VOTRE HISTOIRE</h4>
-          <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un reportage.</p>
+          <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un reportage.</p>
         </div>
         <div className="emphasedSection_image">
           <Image

@@ -20,7 +20,7 @@ export default function Testimonial({
 }: TestimonialProps) {
 	return (
 		<div className="testimonial">
-			<div className={`testimonial_coma ${spaceGrotesk.className}`}>"</div>
+			<div className={`testimonial_coma ${spaceGrotesk.className}`}>{"\""}</div>
 			<p className="testimonial_description">{comment}</p>
 			<div className="testimonial_profile">
 				<Image

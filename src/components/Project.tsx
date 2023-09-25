@@ -16,8 +16,8 @@ export default function Project({ color }: ProjectProps) {
 			<h2 className={libreBaskerville.className}>Name of the project</h2>
 			<div className="project_content">
 			<div className="project_content_description">
-				<p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
-				<p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
+				<p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
+				<p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l interview et la puissance de l immersion journalistique, Racontez votre histoire avec un rep</p>
 			</div>
 			<div className="project_content_image">
 				<Image
