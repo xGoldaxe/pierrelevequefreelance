@@ -1,3 +1,4 @@
+import Project from "@/components/Project";
 import Slider from "@/components/slider";
 import Testimonial from "@/components/testimonial";
 import { Syne } from "next/font/google";
@@ -50,6 +51,7 @@ export default function Home() {
           <p className="keyNumbers_container_number">2</p>
           <p className="keyNumbers_container_label">experts réal</p>
         </div>
+        <div className="magicpattern"></div>
       </div>
 
       <Slider className="sliderLogo">
@@ -172,8 +174,6 @@ export default function Home() {
               <h2 className={syne.className}>Photo d'entreprise</h2>
               <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
               <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
-            </div>
-            <div className="prestations_content_column">
               <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
               <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un rep</p>
             </div>
@@ -236,6 +236,67 @@ export default function Home() {
           />
         </Slider>
       </section>
+      <div className="primary_wrapper smallGap bigGapBottom">
+        <button className="button primary">Prendre contact</button>
+      </div>
+        
+      <div className="projectsWrapper">
+        <Project color="#B8DBFC" />
+        <Project color="#EEA2A2" />
+        <Project color="#A6F2B6" />
+      </div>
+
+      <div className="emphasedSection">
+        <div className="emphasedSection_content">
+          <h3>Racontez</h3>
+          <h4>VOTRE HISTOIRE</h4>
+          <p>Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un reportage.</p>
+        </div>
+        <div className="emphasedSection_image">
+          <Image
+            src="/clip.webp"
+            width={478}
+            height={414}
+            alt="Arrow delimiter"
+          />
+        </div>
+      </div>
+
+      <div className="primary_wrapper smallGap">
+        <button className="button primary">Prendre contact</button>
+      </div>
+      
+      <footer className="footer">
+        <div className="footer_inner">
+          <div className="nav_logo">
+            <Image
+              src="/logo.svg"
+              width={38}
+              height={38}
+              alt="Logo Black Stories"
+            />
+            <p className={syne.className}>Black Stories</p>
+          </div>
+          <div className="footer_inner_section">
+            <h5>Navigation</h5>
+            <p>A propos</p>
+            <p>Avis clients</p>
+            <p>Réalisations</p>
+          </div>
+          <div className="footer_inner_section">
+            <h5>Réseaux sociaux</h5>
+            <p>Instagram</p>
+            <p>Twitter</p>
+            <p>Email</p>
+          </div>
+          <div className="footer_inner_section">
+            <h5>Légal</h5>
+            <p>CGU</p>
+            <p>CGV</p>
+          </div>
+          <p className="footer_inner_watermark">© 2023 Black Stories SAS</p>
+        </div>
+      </footer>
     </main>
   )
 }
