@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface TestimonialProps {
 	comment: string;
 	name: string;
