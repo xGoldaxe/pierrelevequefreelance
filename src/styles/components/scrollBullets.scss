@@ -1,0 +1,51 @@
+.scrollBullets {
+	width: 100%;
+	display: flex;
+	position: relative;
+	align-items: flex-start;
+
+	&_line {
+		position: relative;
+		height: 100%;
+		width: 1px;
+		background-color: $dark-text-color;
+		position: absolute;
+	}
+
+	&__point {
+		position: relative;
+		z-index: 2;
+		display: flex;
+
+		&--last {
+			&::before {
+				top: 0;
+				height: 50%;
+			}
+		}
+	}
+}
+
+.scrollBulletPoint {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	border-bottom: 1px solid $dark-text-color;
+	padding: 0 16px 8px 64px;
+	cursor: pointer;
+	transition: gap 0.3s ease-out;
+	padding-top: 64px;
+
+	&:hover {
+		gap: 64px;
+	}
+
+	h4 {
+		color: $dark-text-color;
+		font-size: 30px;
+	}
+
+	p {
+		font-weight: 100;
+	}
+}
