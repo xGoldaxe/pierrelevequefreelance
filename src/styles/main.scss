@@ -135,7 +135,6 @@ h4 {
   width: calc(100% - 80px);
   margin: 0 40px;
   box-sizing: content-box;
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,6 +144,10 @@ h4 {
     width: 100%;
     height: 100%;
     overflow: hidden;
+
+    video {
+      width: 100%;
+    }
   }
 
   &::before {
@@ -602,12 +605,6 @@ h4 {
       transform: translate(-16px, -16px);
       position: relative;
       transition: transform ease-in-out 0.1s;
-      filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07))
-        drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198))
-        drop-shadow(0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275))
-        drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035))
-        drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725))
-        drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
 
       &:hover {
         transform: translate(0, 0);
@@ -644,7 +641,7 @@ h4 {
   border-top: 1px solid $dark-text-color;
 
   &_inner {
-    padding: 60px 0 80px 0;
+    padding: 60px 20px 80px 20px;
     max-width: 1228px;
     width: 100%;
     display: flex;
@@ -717,11 +714,12 @@ h4 {
 
 // mobile and tablet
 @media screen and (max-width: 1200px) {
-	body {
-		width: 100vw;
-	}
+  body {
+    width: 100vw;
+  }
 
   .nav {
+		padding: 8px 16px;
     &_links {
       display: none;
     }
@@ -782,7 +780,9 @@ h4 {
     &_content {
       padding: 0 40px;
       font-size: 16px;
-      line-height: 26px !important;
+			p {
+				line-height: 26px !important;
+			}
     }
     &_image {
       display: none;
@@ -793,34 +793,42 @@ h4 {
     display: none;
   }
 
-  .footer {
+	.footer {
     &_inner {
-      padding: 40px 20px 80px 20px;
       .nav_logo {
         display: none;
       }
-      &_section {
-        text-align: center;
-				min-width: 0;
-      }
-      &_watermark {
+			max-width: 700px;
+			&_watermark {
         width: 100%;
         text-align: center;
       }
-			h5 {
-				font-size: 15px;
-			}
     }
   }
 }
 
 // mobile
 @media screen and (max-width: 820px) {
+	.nav {
+		p {
+			display: none;
+		}
+	}
+
   .videoBackground {
     &::before {
       display: none;
     }
   }
+
+	.scrollArrow {
+		width: 200px;
+		height: 200px;
+		margin: 150px 0;
+		img {
+			width: 80px;
+		}
+	}
 
   .keyNumbers {
     border: none;
@@ -864,9 +872,34 @@ h4 {
   }
 
   .scrollBulletPoint {
-    grid-template-columns: 1fr 3fr;
-    img {
+		display: flex !important;
+		flex-direction: column;
+		align-items: flex-start !important;
+		padding: 32px 16px !important;
+		img {
       display: none;
+    }
+  }
+
+	.testimonial {
+		border: none;
+		height: auto;
+		padding: 60px 0;
+	}
+
+  .footer {
+    &_inner {
+      padding: 40px 20px 80px 20px;
+      .nav_logo {
+        display: none;
+      }
+      &_section {
+        text-align: center;
+        min-width: 0;
+      }
+      h5 {
+        font-size: 15px;
+      }
     }
   }
 }
