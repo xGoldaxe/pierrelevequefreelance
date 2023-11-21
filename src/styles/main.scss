@@ -730,7 +730,7 @@ h4 {
     &_content {
       gap: 40px;
     }
-		margin-bottom: 80px;
+		margin-bottom: 140px;
   }
 
   .videoBackground {
@@ -781,7 +781,7 @@ h4 {
   }
 
   .emphasedSection {
-		margin-top: 60px;
+		margin-top: 100px;
     &_content {
       padding: 0 20px;
       font-size: 16px;
@@ -831,7 +831,7 @@ h4 {
   .scrollArrow {
     width: 200px;
     height: 200px;
-    margin: 120px 0 80px 0;
+    margin: 160px 0 120px 0;
     img {
       width: 80px;
     }
@@ -857,11 +857,8 @@ h4 {
 		h2 {
 			font-size: 3rem;
 		}
-		padding: 32px 0;
+		padding: 64px 0;
 	}
-  // .slider {
-  //   display: none !important;
-  // }
 
   .about {
     justify-content: center;
