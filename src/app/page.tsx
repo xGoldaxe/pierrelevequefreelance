@@ -63,7 +63,7 @@ export default function Home() {
 
       <Slider>
         <div className="logoScrollSlider">
-          <h2 className={syne.className}>Black Stories-</h2>
+          <h2 className={syne.className}>Black Stories - Black Stories - Black Stories - </h2>
         </div>
       </Slider>
 
@@ -288,7 +288,7 @@ export default function Home() {
 
       <Slider>
         <div className="logoScrollSlider">
-          <h2 className={syne.className}>Testimonials - Testimonials -</h2>
+          <h2 className={syne.className}>Testimonials - Testimonials - Testimonials</h2>
         </div>
       </Slider>
 

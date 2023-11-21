@@ -719,14 +719,18 @@ h4 {
   }
 
   .nav {
-		padding: 8px 16px;
+    padding: 8px 16px;
     &_links {
       display: none;
     }
   }
 
   .about {
-    padding: 40px;
+    padding: 0px 20px;
+    &_content {
+      gap: 40px;
+    }
+		margin-bottom: 80px;
   }
 
   .videoBackground {
@@ -777,29 +781,32 @@ h4 {
   }
 
   .emphasedSection {
+		margin-top: 60px;
     &_content {
-      padding: 0 40px;
+      padding: 0 20px;
       font-size: 16px;
-			p {
-				line-height: 26px !important;
-			}
+      p {
+        line-height: 26px !important;
+      }
     }
     &_image {
       display: none;
     }
+    border-right: 0;
+    border-left: 0;
   }
 
   .project {
     display: none;
   }
 
-	.footer {
+  .footer {
     &_inner {
       .nav_logo {
         display: none;
       }
-			max-width: 700px;
-			&_watermark {
+      max-width: 700px;
+      &_watermark {
         width: 100%;
         text-align: center;
       }
@@ -809,11 +816,11 @@ h4 {
 
 // mobile
 @media screen and (max-width: 820px) {
-	.nav {
-		p {
-			display: none;
-		}
-	}
+  .nav {
+    p {
+      display: none;
+    }
+  }
 
   .videoBackground {
     &::before {
@@ -821,18 +828,19 @@ h4 {
     }
   }
 
-	.scrollArrow {
-		width: 200px;
-		height: 200px;
-		margin: 150px 0;
-		img {
-			width: 80px;
-		}
-	}
+  .scrollArrow {
+    width: 200px;
+    height: 200px;
+    margin: 120px 0 80px 0;
+    img {
+      width: 80px;
+    }
+  }
 
   .keyNumbers {
     border: none;
     padding-top: 20px;
+		margin: 0;
     gap: 20px;
     &_container {
       &_number {
@@ -845,9 +853,15 @@ h4 {
     }
   }
 
-  .slider {
-    display: none !important;
-  }
+	.logoScrollSlider {
+		h2 {
+			font-size: 3rem;
+		}
+		padding: 32px 0;
+	}
+  // .slider {
+  //   display: none !important;
+  // }
 
   .about {
     justify-content: center;
@@ -865,27 +879,39 @@ h4 {
 
   .process {
     .processTitle {
-      font-size: 4rem !important;
-      line-height: 4rem !important;
+      font-size: 3rem !important;
+      line-height: 3rem !important;
       padding: 2rem 0 2rem 1rem;
     }
   }
 
   .scrollBulletPoint {
-		display: flex !important;
-		flex-direction: column;
-		align-items: flex-start !important;
-		padding: 32px 16px !important;
-		img {
-      display: none;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding: 32px 16px !important;
+    img {
+      transform: rotate(-45deg);
+      width: 32px;
     }
   }
 
-	.testimonial {
-		border: none;
-		height: auto;
-		padding: 60px 0;
-	}
+  .testimonial {
+    border: none;
+    height: auto;
+    padding-bottom: 60px;
+		align-items: flex-start;
+		gap: 20px;
+    &_description {
+			padding: 0 20px;
+      font-size: 16px !important;
+      line-height: 26px;
+			max-width: none;
+    }
+		&_title {
+			padding: 0 20px;
+		}
+  }
 
   .footer {
     &_inner {
