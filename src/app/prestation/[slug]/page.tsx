@@ -5,9 +5,9 @@ import Header from "@/components/Header";
 import { Syne } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { HomeContent } from "../../page";
 import prestations from "@/app/cms/prestations";
 import Error from "next/error";
+import HomeContent from "@/app/homeContent";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700"],
