@@ -1,5 +1,6 @@
 "use client"
 
+import useIsMobile from "@/app/hooks/useIsMobile";
 import { ReactNode } from "react";
 
 interface SliderProps {
@@ -8,7 +9,7 @@ interface SliderProps {
 }
 
 export default function Slider({ children, className }: SliderProps) {
-	const isMobile = window.innerWidth < 820;
+	const isMobile = useIsMobile();
 
 	return (
 		<div className={`slider ${className ?? ""}`}>
