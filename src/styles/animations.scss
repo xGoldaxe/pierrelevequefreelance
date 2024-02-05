@@ -1,0 +1,9 @@
+@keyframes blur-text {
+	0% {filter: blur(4px); opacity: 0;}
+	100% {filter: blur(0px); opacity: 1;}
+}
+
+@keyframes blur-text-hide {
+	0% {filter: blur(0px); opacity: 1;}
+	100% {filter: blur(4px); opacity: 0;}
+}

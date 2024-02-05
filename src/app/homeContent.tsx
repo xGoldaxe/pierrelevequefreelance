@@ -48,22 +48,6 @@ export default function HomeContent() {
 
       <div className="projectsWrapper" id="projects">
         <Project />
-        <section className="project">
-          <div className="project_content">
-            <div
-              className="project_content_image"
-              style={{ backgroundImage: `url("/project2.jpg")` }}
-            />
-          </div>
-        </section>
-        <section className="project">
-          <div className="project_content">
-            <div
-              className="project_content_image"
-              style={{ backgroundImage: `url("/project3.jpg")` }}
-            />
-          </div>
-        </section>
       </div>
 
       <Slider>
