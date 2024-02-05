@@ -8,6 +8,7 @@ import Link from "next/link";
 import prestations from "@/app/cms/prestations";
 import Error from "next/error";
 import HomeContent from "@/app/homeContent";
+import Slider from "@/components/slider";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700"],
@@ -40,28 +41,24 @@ export default function Prestation({ params }: { params: { slug: string } }) {
           </Link>
         </div>
 
-        <div className="logoScrollSlider">
-          <h2 className={syne.className}>Galerie - Galerie - </h2>
-        </div>
+        <Slider>
+          <div className="logoScrollSlider">
+            <h2 className={syne.className}>Galerie - Galerie - </h2>
+          </div>
+        </Slider>
 
         <div className="prestation_gallery">
-          <Image
-            src={prestationData.galery[0]}
-            width={722}
-            height={481}
-            alt="project image"
+          <div
+            className="prestation_gallery_image"
+            style={{ backgroundImage: `url("${prestationData.galery[0]}")` }}
           />
-          <Image
-            src={prestationData.galery[1]}
-            width={722}
-            height={481}
-            alt="project image"
+          <div
+            className="prestation_gallery_image"
+            style={{ backgroundImage: `url("${prestationData.galery[1]}")` }}
           />
-          <Image
-            src={prestationData.galery[2]}
-            width={722}
-            height={481}
-            alt="project image"
+          <div
+            className="prestation_gallery_image"
+            style={{ backgroundImage: `url("${prestationData.galery[2]}")` }}
           />
         </div>
 
@@ -83,30 +80,26 @@ export default function Prestation({ params }: { params: { slug: string } }) {
   );
 }
 
-function PrestationImage({ src }: { src: string }) {
+function PrestationImage({ src }: { src: string }) {
   return (
     <div className="prestation_image">
       <Image
         src="/styled_arrow.svg"
+        className="prestation_image_arrow"
         width={116}
         height={65.6}
         alt="Arrow delimiter"
       />
-      <div className="prestation_image_img">
-        <Image
-          src={src}
-          width={722}
-          height={481}
-          alt="project image"
-        />
-      </div>
-
+      <div
+        className="prestation_image_img"
+        style={{ backgroundImage: `url("${src}")` }}
+      ></div>
       <Image
         src="/styled_arrow.svg"
         width={116}
         height={65.6}
         alt="Arrow delimiter"
-        className="rotateArrow"
+        className="rotateArrow prestation_image_arrow"
       />
     </div>
   );

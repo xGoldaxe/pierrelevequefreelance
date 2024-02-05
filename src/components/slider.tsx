@@ -1,3 +1,5 @@
+"use client"
+
 import { ReactNode } from "react";
 
 interface SliderProps {
@@ -6,10 +8,12 @@ interface SliderProps {
 }
 
 export default function Slider({ children, className }: SliderProps) {
+	const isMobile = window.innerWidth < 820;
+
 	return (
 		<div className={`slider ${className ?? ""}`}>
-			<div className="slider__elements first">{children}</div>
-			<div className="slider__elements second">{children}</div>
+			<div className="slider__elements first">{children}{isMobile ? children : null}</div>
+			<div className="slider__elements second">{children}{isMobile ? children : null}</div>
 		</div>
 	)
 }

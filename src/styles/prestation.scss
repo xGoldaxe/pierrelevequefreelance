@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
   &_header {
     width: 100%;
+    overflow-y: visible;
     height: 55vh;
     display: flex;
     flex-direction: column;
@@ -32,31 +34,47 @@
       border-radius: 50%;
       filter: blur(50px);
     }
+
+    h1, p, a {
+      position: relative;
+    }
   }
 
   &_title {
     font-size: 64px;
     padding-top: 150px;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 150px 16px 0 16px;
   }
 
   &_description {
     max-width: 800px;
     margin-bottom: 60px;
+    max-width: 100%;
+    padding: 0 16px;
+    text-align: center;
   }
 
   &_gallery {
     display: flex;
-		width: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-    img {
-      height: 482px;
-      aspect-ratio: 1/1;
+    &_image {
+      height: 480px;
+      width: 100%;
+      background-position: center center;
+      background-size: cover;
     }
 
-		&_description {
-			max-width: 800px;
-			margin: 208px 0;
-		}
+    &_description {
+      max-width: 800px;
+      margin: 208px 0;
+    }
   }
 
   &_image {
@@ -64,10 +82,69 @@
     justify-content: center;
     align-items: center;
     gap: 60px;
-		margin-top: 208px;
+    margin-top: 208px;
+
+    &_img {
+      width: 800px;
+      max-width: 100%;
+      height: 480px;
+      background-position: center center;
+      background-size: cover;
+    }
   }
 }
 
 .rotateArrow {
   transform: rotate(180deg);
+}
+
+// mobile and tablet
+@media screen and (max-width: 1200px) {
+  .prestation {
+    &_gallery {
+      &_description {
+        width: 800px;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-weight: 100;
+        line-height: 26px;
+        font-size: 16px;
+        padding: 0 13px;
+        margin-top: 140px;
+        margin-bottom: 140px;
+      }
+    }
+
+    &_image {
+      &_arrow {
+        display: none;
+      }
+    }
+
+    .gradient {
+      top: 15vh;
+      right: -150px;
+    }
+
+    .gradientBottom {
+      top: 35vh;
+      left: -200px;
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 820px) {
+  .prestation {
+    &_title {
+      font-size: 32px;
+      padding-top: 150px;
+    }
+
+    &_description {
+      font-size: 16px;
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+  }
 }

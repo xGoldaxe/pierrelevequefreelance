@@ -1,5 +1,7 @@
 "use client";
 
+import projects, { CmsProject } from "@/app/cms/projects";
+import useTimeout from "@/app/hooks/useTimeout";
 import { Libre_Baskerville } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 
@@ -11,16 +13,13 @@ const libreBaskerville = Libre_Baskerville({
 export default function Project() {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const [currentText, setCurrentText] = useState(0);
-  const [hasBeenChanged, setHasBeenChanged] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(entry.target.id);
             setCurrentText(parseInt(entry.target.id));
-            setHasBeenChanged(true);
           }
         });
       },
@@ -46,18 +45,7 @@ export default function Project() {
   return (
     <section className="project">
       <div className="projects">
-        <ProjectDescription
-          text="Project 1"
-          shouldAppear={hasBeenChanged && currentText === 0}
-        />
-        <ProjectDescription
-          text="Project 2"
-          shouldAppear={hasBeenChanged && currentText === 1}
-        />
-        <ProjectDescription
-          text="Project 3"
-          shouldAppear={hasBeenChanged && currentText === 2}
-        />
+        <ProjectDescription project={projects[currentText]} />
       </div>
 
       <div ref={targetRef}>
@@ -82,55 +70,46 @@ export default function Project() {
 }
 
 interface ProjectDescriptionProps {
-  text: string;
-  shouldAppear: boolean;
+  project: CmsProject;
 }
 
-function ProjectDescription({
-  text,
-  shouldAppear,
-}: ProjectDescriptionProps) {
+function ProjectDescription({ project }: ProjectDescriptionProps) {
   const animationDuration = 500;
 
-  const [isHidden, setIsHidden] = useState(false);
-  const [previousShouldAppear, setPreviousShouldAppear] = useState(shouldAppear);
+  const [currentProject, setCurrentProject] = useState(project);
+  const animationTimer = useTimeout();
 
-  if (previousShouldAppear !== shouldAppear) {
-    setPreviousShouldAppear(shouldAppear);
-    setTimeout(() => {
-      setIsHidden(!shouldAppear);
-    }, animationDuration);
-  }
+  const isAnimating = currentProject.id !== project.id;
 
-  if (isHidden) {
-    return <></>;
-  }
+  useEffect(() => {
+    if (isAnimating) {
+      animationTimer(animationDuration, () => {
+        setCurrentProject(project);
+      });
+    }
+  }, [project.id]); // in useEffect to avoid infinite rendering loop due to timer state change
+
+  const animationStyle = {
+    filter: isAnimating ? "blur(4px)" : "blur(0px)",
+    opacity: isAnimating ? 0 : 1,
+  };
 
   return (
     <div className="project_content_inner">
-      <div
-        className="project_content_description"
-        style={{ animation: shouldAppear ? `blur-text ease-in-out ${animationDuration}ms` : `blur-text-hide ease-in-out ${animationDuration}ms` }}
-      >
-        <h2 className={libreBaskerville.className}>Project Name</h2>
-        <p>{text}</p>
-        <p>
-          Racontez votre histoire avec un reportage. Une méthode de
-          communication particulièrement efficace et engageante. Cette approche
-          combine les avantages de l interview et la puissance de l immersion
-          journalistique, Racontez votre histoire avec un rep
-        </p>
+      <div className="project_content_description" style={animationStyle}>
+        <h2 className={libreBaskerville.className}>{currentProject.name}</h2>
+        {currentProject.content.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
       </div>
-      <div className="project_details">
+      <div className="project_details" style={animationStyle}>
         <p className="project_details_label">Date de production</p>
         <p className="project_details_label">Type de projet</p>
         <p className="project_details_label">Client</p>
         <div className="project_details_line"></div>
-        <p className="project_details_value">2023</p>
-        <p className="project_details_value">
-          Réalisation vidéo pour entreprise
-        </p>
-        <p className="project_details_value">Johndoecorporation</p>
+        <p className="project_details_value">{currentProject.year}</p>
+        <p className="project_details_value">{currentProject.type}</p>
+        <p className="project_details_value">{currentProject.client}</p>
       </div>
     </div>
   );

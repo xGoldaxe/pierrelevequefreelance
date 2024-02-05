@@ -1,10 +1,12 @@
+import prestations from "@/app/cms/prestations";
 import { Syne } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const syne = Syne({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  style: ['normal'],
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  style: ["normal"],
 });
 
 export default function Footer() {
@@ -22,9 +24,18 @@ export default function Footer() {
         </div>
         <div className="footer_inner_section">
           <h5>Navigation</h5>
+          {prestations.map((prestation) => (
+            <Link
+              href={`/prestation/${prestation.slug}`}
+              key={prestation.title}
+            >
+              <p>{prestation.title}</p>
+            </Link>
+          ))}
           <p>A propos</p>
-          <p>Avis clients</p>
+          <p>Préstations</p>
           <p>Réalisations</p>
+          <p>Avis clients</p>
         </div>
         <div className="footer_inner_section">
           <h5>Réseaux sociaux</h5>
