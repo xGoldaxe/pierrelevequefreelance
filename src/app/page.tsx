@@ -11,8 +11,9 @@ const libreBaskerville = Libre_Baskerville({
 export default function Home() {
   return (
     <main>
-      <Header />
-      <div className="videoBackground">
+      <p>salut</p>
+      {/* <Header /> */}
+      {/* <div className="videoBackground">
         <div className="videoBackground_video">
           <video autoPlay muted loop>
             <source src="/video_bs_prod.mp4" type="video/mp4"></source>
@@ -47,7 +48,7 @@ export default function Home() {
         </div>
       </div>
       <HomeContent />
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }
