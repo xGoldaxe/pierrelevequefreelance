@@ -1,6 +1,7 @@
 import { Syne } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedLink from "./AnimatedLink";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700"],
@@ -23,18 +24,10 @@ export default function Header() {
         </div>
       </Link>
       <div className={`nav_links ${syne.className}`}>
-        <h4>
-          <Link href={"/#about"}>A propos</Link>
-        </h4>
-        <h4>
-          <Link href={"/#prestations"}>Préstations</Link>
-        </h4>
-        <h4>
-          <Link href={"/#projects"}>Réalisations</Link>
-        </h4>
-        <h4>
-          <Link href={"/#testimonials"}>Avis clients</Link>
-        </h4>
+        <AnimatedLink href={"/#about"}>A propos</AnimatedLink>
+        <AnimatedLink href={"/#prestations"}>Préstations</AnimatedLink>
+        <AnimatedLink href={"/#projects"}>Réalisations</AnimatedLink>
+        <AnimatedLink href={"/#testimonials"}>Avis clients</AnimatedLink>
       </div>
       <Link href={"/contact"}>
         <button className="button">Contact</button>
