@@ -3,9 +3,10 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  overflow-x: hidden;
 
   &_header {
-    width: 100%;
+    width: 100vw;
     overflow-y: visible;
     height: 55vh;
     display: flex;

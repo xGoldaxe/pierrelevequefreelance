@@ -22,20 +22,20 @@ export default function Header() {
           <p className={syne.className}>BS PROD</p>
         </div>
       </Link>
-      <ul className={`nav_links ${syne.className}`}>
-        <li>
+      <div className={`nav_links ${syne.className}`}>
+        <h4>
           <Link href={"/#about"}>A propos</Link>
-        </li>
-        <li>
+        </h4>
+        <h4>
           <Link href={"/#prestations"}>Préstations</Link>
-        </li>
-        <li>
+        </h4>
+        <h4>
           <Link href={"/#projects"}>Réalisations</Link>
-        </li>
-        <li>
+        </h4>
+        <h4>
           <Link href={"/#testimonials"}>Avis clients</Link>
-        </li>
-      </ul>
+        </h4>
+      </div>
       <Link href={"/contact"}>
         <button className="button">Contact</button>
       </Link>
