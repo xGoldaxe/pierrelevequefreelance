@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +10,6 @@ body {
   overflow-x: hidden;
   scrollbar-gutter: auto;
   color: $dark-text-color;
-	cursor: url('/cursor.svg') 15 15, auto;
 }
 
 ::selection {
@@ -19,7 +22,7 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: $text-color;
-	width: 100vw;
+  width: 100vw;
 }
 
 img {
@@ -742,23 +745,24 @@ button {
 }
 
 .tally {
-	position: relative;
-	width: 100%;
-	min-height: 284px;
-	iframe {
-		position: relative;
-		z-index: 2;
-	}
-	&_loader {
-		top: 20px;
-		width: 100%;
-		display: flex;
-		position: absolute;
-		justify-content: center;
-	}
+  position: relative;
+  width: 100%;
+  min-height: 284px;
+  iframe {
+    position: relative;
+    z-index: 2;
+  }
+  &_loader {
+    top: 20px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+  }
 }
 
-@media screen and (max-width: 1804px){ // special size
+@media screen and (max-width: 1804px) {
+  // special size
   .testimonials {
     gap: 40px;
   }
@@ -858,6 +862,7 @@ button {
 
   .footer {
     &_inner {
+      justify-content: space-around;
       .nav_logo {
         display: none;
       }
@@ -896,6 +901,8 @@ button {
   .keyNumbers {
     border: none;
     padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
     margin: 0;
     gap: 20px;
     &_container {
@@ -903,7 +910,7 @@ button {
         font-size: 32px;
       }
       &_label {
-        font-size: 16px;
+        font-size: 14px;
         white-space: nowrap;
       }
     }
@@ -943,7 +950,7 @@ button {
     flex-direction: column;
     align-items: flex-start !important;
     padding: 32px 16px !important;
-    
+
     img {
       transform: rotate(-45deg);
       width: 32px;
@@ -955,7 +962,7 @@ button {
     height: auto;
     padding-bottom: 60px;
     align-items: flex-start;
-    
+
     &_description {
       padding: 0 20px;
       font-size: 16px !important;
@@ -968,7 +975,7 @@ button {
   }
 
   .emphasedSection {
-    text-align: center; 
+    text-align: center;
 
     p {
       text-align: left;
@@ -985,7 +992,7 @@ button {
         display: none;
       }
       &_section {
-        text-align: center;
+        // text-align: center;
         min-width: 0;
       }
       h5 {
