@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Libre_Baskerville } from "next/font/google";
 import HomeContent from "./homeContent";
+import featuresCms from "./cms/features";
 
 const libreBaskerville = Libre_Baskerville({
   weight: ["400"],
@@ -21,30 +22,16 @@ export default function Home() {
       </div>
 
       <div className="keyNumbers">
-        <div className="keyNumbers_container">
-          <p
-            className={`keyNumbers_container_number ${libreBaskerville.className}`}
-          >
-            3+
-          </p>
-          <p className="keyNumbers_container_label">projets réalisés</p>
-        </div>
-        <div className="keyNumbers_container">
-          <p
-            className={`keyNumbers_container_number ${libreBaskerville.className}`}
-          >
-            100%
-          </p>
-          <p className="keyNumbers_container_label">clients satisfaits</p>
-        </div>
-        <div className="keyNumbers_container">
-          <p
-            className={`keyNumbers_container_number ${libreBaskerville.className}`}
-          >
-            2
-          </p>
-          <p className="keyNumbers_container_label">experts réal</p>
-        </div>
+        {featuresCms.map((feature) => (
+          <div className="keyNumbers_container" key={feature.title}>
+            <p
+              className={`keyNumbers_container_number ${libreBaskerville.className}`}
+            >
+              {feature.amount}
+            </p>
+            <p className="keyNumbers_container_label">{feature.title}</p>
+          </div>
+        ))}
       </div>
       <HomeContent />
       <Footer />

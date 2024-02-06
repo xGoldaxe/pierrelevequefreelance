@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import prestations from "./cms/prestations";
 import { Libre_Baskerville, Syne } from "next/font/google";
+import testimonialCms from "./cms/testimonials";
+import emphasedSectionCms from "./cms/emphasedSection";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700"],
@@ -57,37 +59,23 @@ export default function HomeContent() {
       </Slider>
 
       <div className="testimonials" id="testimonials">
-        <Testimonial
-          comment="Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un repcomment"
-          name="John Doe"
-          title="Youtubeur"
-          imgUrl="/client3.svg"
-        />
-        <Testimonial
-          comment="Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un repcomment"
-          name="John Doe"
-          title="Youtubeur"
-          imgUrl="/client3.svg"
-        />
-        <Testimonial
-          comment="Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un repcomment"
-          name="John Doe"
-          title="Youtubeur"
-          imgUrl="/client3.svg"
-        />
+        {testimonialCms.map((testimonial, index) => (
+          <Testimonial
+            key={index}
+            comment={testimonial.description}
+            name={testimonial.name}
+            title={testimonial.job}
+          />
+        ))}
       </div>
 
       <div className="emphasedSection">
         <div className="emphasedSection_content">
           <div>
-            <h3>Racontez</h3>
-            <h4>VOTRE HISTOIRE</h4>
+            <h3>{emphasedSectionCms.title}</h3>
+            <h4>{emphasedSectionCms.subtitle}</h4>
             <p>
-              Racontez votre histoire avec un reportage. Une méthode de
-              communication particulièrement efficace et engageante. Cette
-              approche combine les avantages de l interview et la puissance de l
-              immersion journalistique, Racontez votre histoire avec un
-              reportage.
+              {emphasedSectionCms.description}
             </p>
           </div>
           <Link href="/contact">

@@ -2,11 +2,10 @@ interface TestimonialProps {
 	comment: string;
 	name: string;
 	title: string;
-	imgUrl: string;
 }
 
 export default function Testimonial({
-	comment, name, title, imgUrl,
+	comment, name, title,
 }: TestimonialProps) {
 	return (
 		<div className="testimonial">
