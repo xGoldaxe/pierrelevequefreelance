@@ -1,6 +1,3 @@
-"use client"
-
-import useIsMobile from "@/app/hooks/useIsMobile";
 import { Syne } from "next/font/google";
 import { ReactNode } from "react";
 
