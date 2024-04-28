@@ -60,7 +60,7 @@
 @media screen and (max-width: 1200px) {
 	.pricing {
 		margin-top: 104px;
-		margin-bottom: 104px;
+		margin-bottom: 52px;
 		padding-top: 0;
 		padding-bottom: 0;
 		background-color: $text-color;
@@ -68,6 +68,7 @@
 		&__box {
 			background-color: $dark-text-color;
 			color: $text-color;
+			max-width: calc(90vw - 64px);
 		}
 
 		&__features {

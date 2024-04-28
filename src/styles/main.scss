@@ -106,6 +106,10 @@ button {
     font-size: 32px;
     font-family: "syne";
     font-weight: 700;
+
+    &_short {
+      display: none;
+    }
   }
 
   &_links {
@@ -860,12 +864,19 @@ button {
     display: none;
   }
 
+  .nav_logo {
+    &_full {
+      display: none;
+    }
+    &_short {
+      display: block;
+    }
+  }
+
   .footer {
+
     &_inner {
       justify-content: space-around;
-      .nav_logo {
-        display: none;
-      }
       max-width: 700px;
       &_watermark {
         width: 100%;
@@ -877,12 +888,6 @@ button {
 
 // mobile
 @media screen and (max-width: 820px) {
-  .nav {
-    p {
-      display: none;
-    }
-  }
-
   .videoBackground {
     &::before {
       display: none;
@@ -990,9 +995,6 @@ button {
   .footer {
     &_inner {
       padding: 40px 20px 80px 20px;
-      .nav_logo {
-        display: none;
-      }
       &_section {
         // text-align: center;
         min-width: 0;

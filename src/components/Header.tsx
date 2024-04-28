@@ -14,7 +14,8 @@ export default function Header() {
     <nav className="nav">
       <Link href={"/"}>
         <div className="nav_logo">
-          <p className={syne.className}>Pierre Leveque</p>
+          <p className={`${syne.className} nav_logo_full`}>Pierre Leveque</p>
+          <p className={`${syne.className} nav_logo_short`}>P.</p>
         </div>
       </Link>
       <div className={`nav_links ${syne.className}`}>
