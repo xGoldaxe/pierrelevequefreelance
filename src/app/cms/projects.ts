@@ -12,8 +12,10 @@ const projects: CmsProject[] = [
 		name: 'Deep Tracker',
 		id: 1,
 		content: [
-			'Project A involves the development of a sophisticated web application that enhances user experience.',
-			'The application features cutting-edge technologies and aims to revolutionize the industry.',
+			"DeepTracker est un logiciel de gestion de temps et de projet avancé et développé avec une stack performante et ultra-récente (typescript, next, prisma, trpc).",
+			"La partie gestion de projet permet de créer des projets, d'y assigner des tâches, des les chiffrer et de suivre l'avancée d'un projet.",
+			"La partie gestion de temps permet de suivre son activité au fur et à mesure en lançant des sessions. Celles-ci peuvent ensuite être modifiées dans la dashboard via un calendrier entièrement interactif.",
+			"Il y a d'autres fonctionnalités mineures comme l'export de ficher excel.",
 		],
 		year: 2023,
 		type: 'Saas',

@@ -2,6 +2,7 @@ interface LinkCms {
 	name: string;
 	url: string;
 	target?: string;
+	prefetch?: boolean;
 }
 
 const linksCms = {
@@ -18,18 +19,9 @@ const linksCms = {
 			name: "Cv",
 			url: "/cv.pdf",
 			target: "_blank",
+			prefetch: false,
 		},
 	],
-	legals: [
-		{
-			name: "Mentions légales",
-			url: "/mentions-legales"
-		},
-		{
-			name: "Politique de confidentialité",
-			url: "/politique-de-confidentialite"
-		}
-	]
 }
 
 export default linksCms;

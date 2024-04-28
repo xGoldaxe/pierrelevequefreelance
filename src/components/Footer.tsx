@@ -43,7 +43,7 @@ export default function Footer() {
           <h5>Ressources</h5>
           {
             linksCms.socials.map((social) => (
-              <AnimatedLink href={social.url} key={social.name} target={social.target}><p>{social.name}</p></AnimatedLink>
+              <AnimatedLink href={social.url} key={social.name} target={social.target} prefetch={social.prefetch}><p>{social.name}</p></AnimatedLink>
             ))
           }
         </div>

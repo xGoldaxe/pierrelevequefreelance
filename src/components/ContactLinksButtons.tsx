@@ -39,7 +39,7 @@ export default function ContactLinksButtons({ light }: ContactLinksButtonsProps)
             />
           </button>
         </Link>
-        <Link href="/cv.pdf" target="_blank">
+        <Link href="/cv.pdf" target="_blank" prefetch={false}>
           <button className="button button--secondary">
             <Image src="/cv.svg" width={16} height={16} alt="Arrow delimiter" />
           </button>
