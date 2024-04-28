@@ -8,7 +8,7 @@ import Link from "next/link";
 import prestations from "@/app/cms/prestations";
 import Error from "next/error";
 import HomeContent from "@/app/homeContent";
-import Slider from "@/components/slider";
+import Slider, { LogoScrollSlider } from "@/components/slider";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700"],
@@ -42,9 +42,7 @@ export default function Prestation({ params }: { params: { slug: string } }) {
         </div>
 
         <Slider>
-          <div className="logoScrollSlider">
-            <h2 className={syne.className}>{prestationData.sliderText}</h2>
-          </div>
+          <LogoScrollSlider content={prestationData.sliderText} />
         </Slider>
 
         <div className="prestation_gallery">

@@ -1,10 +1,20 @@
 export default function Pricing() {
 	return (
-		<div className="pricing">
-			<h3>Tarification</h3>
+		<div className="pricings">
 			<div className="pricing__box">
-				<p>600€<span className="pricing__tab">/jours</span></p>
-				<p>Forfait unique</p>
+				<p className="pricing__box__price">600€<span className="pricing__box__price__tab">/jour</span></p>
+				<p className="pricing__box__title">Forfait journée</p>
+			</div>
+			<div className="pricing__features">
+				<h3>Comprend:</h3>
+				<ul>
+					<li>- Développement sur vos projets</li>
+					<li>- Expertise React</li>
+					<li>- Conception</li>
+					<li>- Ux design</li>
+					<li>- Remote ou présentiel (Paris)</li>
+					<li>...</li>
+				</ul>
 			</div>
 		</div>
 	)

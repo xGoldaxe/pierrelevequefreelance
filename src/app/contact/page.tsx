@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Slider from "@/components/slider";
+import Slider, { LogoScrollSlider } from "@/components/slider";
 import { Syne } from "next/font/google";
 import ContactUs from "./contactUs";
 import AboutBlock from "@/components/AboutBlock";
@@ -19,9 +19,7 @@ export default function Contact() {
 			<ContactUs />
 
       <Slider>
-        <div className="logoScrollSlider">
-          <h2 className={syne.className}>Fullstack -</h2>
-        </div>
+        <LogoScrollSlider content="Fullstack" />
       </Slider>
 
       <AboutBlock />
