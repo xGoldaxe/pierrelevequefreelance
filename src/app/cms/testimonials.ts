@@ -6,19 +6,14 @@ interface TestimonialCms {
 
 const testimonialCms: TestimonialCms[] = [
 	{
-		description: "Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un repcomment",
-		name: "John Doe",
-		job: "Youtubeur",
+		description: "Pierre est quelqu’un qui s’adapte très rapidement à ce qu’on lui demande. Avec un projet Figma, des assets, et des directives, il a réussi à faire un site web très optimisé en Next.js et respectant à la lettre la maquette.",
+		name: "Lothaire Guée",
+		job: "Entrepreneur",
 	},
 	{
-		description: "Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un repcomment",
-		name: "John Doe",
-		job: "Acteur",
-	},
-	{
-		description: "Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un repcomment",
-		name: "John Doe",
-		job: "Ecrivain",
+		description: "Tout au long de sa mission, Pierre a su faire preuve de sérieux et de rigueur sur les différentes tâches qui lui ont été demandées. Il a été d'une grande aide et a fait évoluer les projets dans la bonne direction tout en réduisant la dette technique.",
+		name: "Coreoz",
+		job: "Agence web",
 	},
 ]
 

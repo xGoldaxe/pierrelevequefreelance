@@ -6,10 +6,10 @@ interface EmphasedSectionCms {
 }
 
 const emphasedSectionCms: EmphasedSectionCms = {
-	title: "Racontez",
-	subtitle: "votre histoire",
-	description: "Racontez votre histoire avec un reportage. Une méthode de communication particulièrement efficace et engageante. Cette approche combine les avantages de l'interview et la puissance de l'immersion journalistique, Racontez votre histoire avec un repcomment",
-	image: "/project.jpg",
+	title: "Arrêtez de chercher",
+	subtitle: "la perle rare",
+	description: "Collaborer avec moi c'est collaborer avec un expert de React et son ecosystème avec une solide expérience en back et en devops. Un développeur qui s'adapte rapidement à votre stack et fournis un code simple, efficace et communicatif et avec une volonté d'être efficace en équipe.",
+	image: "/emphased.jpg",
 }
 
 export default emphasedSectionCms;

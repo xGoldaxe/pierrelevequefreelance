@@ -51,17 +51,17 @@ export default function Project() {
       <div ref={targetRef}>
         <div
           className="project_content_image"
-          style={{ backgroundImage: `url("/project.jpg")` }}
+          style={{ backgroundImage: `url("/dptracker.png")`, backgroundPosition: "left" }}
           id="0"
         />
         <div
           className="project_content_image"
-          style={{ backgroundImage: `url("/project2.jpg")` }}
+          style={{ backgroundImage: `url("/webserv.png")`, backgroundPosition: "left" }}
           id="1"
         />
         <div
           className="project_content_image"
-          style={{ backgroundImage: `url("/project3.jpg")` }}
+          style={{ backgroundImage: `url("/pong.png")` }}
           id="2"
         />
       </div>

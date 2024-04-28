@@ -21,7 +21,7 @@ export default function Footer() {
             height={38}
             alt="Logo Black Stories"
           />
-          <p className={syne.className}>Black Stories</p>
+          <p className={syne.className}>Pierre Leveque</p>
         </div>
         <div className="footer_inner_section">
           <h5>Navigation</h5>
@@ -37,24 +37,17 @@ export default function Footer() {
           <AnimatedLink href={"/#prestations"}><p>Préstations</p></AnimatedLink>
           <AnimatedLink href={"/#projects"}><p>Réalisations</p></AnimatedLink>
           <AnimatedLink href={"/#testimonials"}><p>Avis clients</p></AnimatedLink>
+          <AnimatedLink href={"/#pricing"}><p>Tarifs</p></AnimatedLink>
         </div>
         <div className="footer_inner_section">
-          <h5>Réseaux sociaux</h5>
+          <h5>Ressources</h5>
           {
             linksCms.socials.map((social) => (
-              <AnimatedLink href={social.url} key={social.name}><p>{social.name}</p></AnimatedLink>
+              <AnimatedLink href={social.url} key={social.name} target={social.target}><p>{social.name}</p></AnimatedLink>
             ))
           }
         </div>
-        <div className="footer_inner_section">
-          <h5>Légal</h5>
-          {
-            linksCms.legals.map((social) => (
-              <AnimatedLink href={social.url} key={social.name}><p>{social.name}</p></AnimatedLink>
-            ))
-          }
-        </div>
-        <p className="footer_inner_watermark">© 2023 Black Stories SAS</p>
+        <p className="footer_inner_watermark">© 2024 Pierre Leveque</p>
       </div>
     </footer>
   );

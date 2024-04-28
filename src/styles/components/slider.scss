@@ -22,6 +22,10 @@ $sliderDuration: 40s;
 	}
 }
 
+.sliderSmallTop {
+	padding: 64px 0;
+}
+
 @keyframes firstSlide {
 	0% {
 		transform: translateX(0%);

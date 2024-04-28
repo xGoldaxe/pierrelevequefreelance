@@ -31,7 +31,7 @@ export default function Prestation({ params }: { params: { slug: string } }) {
           <div className="gradient"></div>
           <div className="gradientBottom"></div>
           <h1 className="prestation_title">
-            Agence de {prestationData.title.toLowerCase()}
+            {prestationData.pageTitle}
           </h1>
 
           <p className="prestation_description">{prestationData.description}</p>
@@ -43,7 +43,7 @@ export default function Prestation({ params }: { params: { slug: string } }) {
 
         <Slider>
           <div className="logoScrollSlider">
-            <h2 className={syne.className}>Galerie - Galerie - </h2>
+            <h2 className={syne.className}>{prestationData.sliderText}</h2>
           </div>
         </Slider>
 
@@ -72,6 +72,8 @@ export default function Prestation({ params }: { params: { slug: string } }) {
 
         <PrestationImage src={prestationData.emphasedImage} />
       </div>
+
+      <div className="bigGapBottom" />
 
       <HomeContent />
 

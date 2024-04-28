@@ -20,7 +20,7 @@ export default function Contact() {
 
       <Slider>
         <div className="logoScrollSlider">
-          <h2 className={syne.className}>Black Stories - </h2>
+          <h2 className={syne.className}>Fullstack -</h2>
         </div>
       </Slider>
 

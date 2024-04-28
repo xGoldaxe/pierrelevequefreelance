@@ -126,6 +126,17 @@ button {
   border-radius: 20px;
   outline: none;
   color: $dark-text-color;
+
+  &--secondary {
+    background-color: $dark-text-color;
+    color: $text-color;
+    padding: 0;
+    height: 41.5px;
+    width: 41.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .primary {
@@ -236,18 +247,10 @@ button {
 
   &_image {
     position: relative;
-
-    &::before {
-      // content: "";
-      position: absolute;
-      width: calc(100% + 32px);
-      height: 100%;
-      top: -16px;
-      right: -16px;
-      border: 1px solid $dark-text-color;
-      border-top-left-radius: 120px;
-      border-top-right-radius: 120px;
-    }
+    width: 300px;
+    height: 485px;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
 
     img {
       position: relative;
@@ -596,6 +599,11 @@ button {
       display: flex;
       align-items: center;
       gap: 16px;
+
+      &_links {
+        display: flex;
+        gap: 8px;
+      }
     }
   }
 
@@ -638,13 +646,6 @@ button {
 
       &:hover {
         transform: translate(0, 0);
-      }
-
-      img {
-        width: 508px;
-        aspect-ratio: auto;
-        z-index: 2;
-        position: relative;
       }
     }
 

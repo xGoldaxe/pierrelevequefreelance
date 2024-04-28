@@ -6,7 +6,7 @@ export default function ContactUs() {
   return (
     <div className="tally">
       <iframe
-        data-tally-src="https://tally.so/embed/3yJy60?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        data-tally-src="https://tally.so/embed/n0EMG9?hideTitle=1&transparentBackground=1&dynamicHeight=1"
         width="100%"
         height="284"
         frameBorder={0}

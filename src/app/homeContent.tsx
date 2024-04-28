@@ -9,6 +9,8 @@ import prestations from "./cms/prestations";
 import { Libre_Baskerville, Syne } from "next/font/google";
 import testimonialCms from "./cms/testimonials";
 import emphasedSectionCms from "./cms/emphasedSection";
+import Pricing from "@/components/Pricing";
+import ContactLinksButtons from "@/components/ContactLinksButtons";
 
 const syne = Syne({
   weight: ["400", "500", "600", "700"],
@@ -25,8 +27,8 @@ export default function HomeContent() {
   return (
     <>
       <Slider>
-        <div className="logoScrollSlider">
-          <h2 className={syne.className}>Black Stories - </h2>
+        <div className="logoScrollSlider sliderSmallTop">
+          <h2 className={syne.className}>Fullstack - </h2>
         </div>
       </Slider>
 
@@ -34,7 +36,7 @@ export default function HomeContent() {
 
       <div className="process" id="prestations">
         <h2 className={`processTitle ${libreBaskerville.className}`}>
-          Nos prestations
+          Mes prestations
         </h2>
         <ScrollBullets elements={prestations} />
       </div>
@@ -69,6 +71,10 @@ export default function HomeContent() {
         ))}
       </div>
 
+      <div className="pricing" id="pricing">
+        <Pricing />
+      </div>
+
       <div className="emphasedSection">
         <div className="emphasedSection_content">
           <div>
@@ -78,26 +84,14 @@ export default function HomeContent() {
               {emphasedSectionCms.description}
             </p>
           </div>
-          <Link href="/contact">
-            <div className="emphasedSection_content_button">
-              <Image
-                src="/styled_arrow.svg"
-                width={58}
-                height={32.8}
-                alt="Arrow delimiter"
-              />
-              <button className="button">Parlez nous !</button>
-            </div>
-          </Link>
+          <ContactLinksButtons />
         </div>
         <div className="emphasedSection_image">
-          <div className="emphasedSection_image_wrapper">
-            <Image
-              src="/clip.webp"
-              width={478}
-              height={414}
-              alt="Arrow delimiter"
-            />
+          <div className="emphasedSection_image_wrapper" style={{
+            backgroundImage: `url('${emphasedSectionCms.image}')`,
+            backgroundSize: "cober",
+            backgroundPosition: "center",
+          }}>
           </div>
         </div>
       </div>
