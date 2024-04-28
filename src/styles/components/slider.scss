@@ -1,10 +1,11 @@
-$sliderDuration: 40s;
+$sliderDuration: 80s;
 
 .slider {
 	position: relative;
 	display: flex;
 	justify-content: flex-start;
 	overflow: hidden;
+	width: 100%;
 
 	&__elements {
 		display: flex;
@@ -18,9 +19,8 @@ $sliderDuration: 40s;
 
 	.second {
 		padding-left: 128px;
-		animation: $sliderDuration linear slide infinite;
+		animation: $sliderDuration linear secondSlide infinite;
 		position: absolute;
-		left: 100%;
 	}
 }
 
@@ -33,6 +33,31 @@ $sliderDuration: 40s;
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(calc(-100%));
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes secondSlide {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+// mobile
+@media screen and (max-width: 820px) {
+	.slider {
+		.first {
+			padding-left: 32px;
+			animation: $sliderDuration linear slide infinite;
+		}
+		
+		.second {
+			padding-left: 32px;
+			animation: $sliderDuration linear secondSlide infinite;
+			position: absolute;
+		}
 	}
 }

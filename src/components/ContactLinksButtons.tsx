@@ -13,6 +13,7 @@ export default function ContactLinksButtons({ light }: ContactLinksButtonsProps)
         width={58}
         height={32.8}
         alt="Arrow delimiter"
+        className="emphasedSection_content_button__arrow" 
       />)}
       <Link href="/contact">
         <button className="button">{light ? "Contact" : "Contactez moi !"}</button>

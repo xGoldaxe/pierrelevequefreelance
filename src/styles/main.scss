@@ -917,6 +917,7 @@ button {
   }
 
   .logoScrollSlider {
+    gap: 32px;
     h2 {
       font-size: 3rem;
     }
@@ -977,6 +978,10 @@ button {
   .emphasedSection {
     text-align: center;
 
+    &_content_button__arrow {
+      display: none;
+    }
+
     p {
       text-align: left;
     }
@@ -996,5 +1001,9 @@ button {
         font-size: 15px;
       }
     }
+  }
+
+  .button {
+    padding: 12px;
   }
 }
