@@ -995,6 +995,11 @@ button {
   .footer {
     &_inner {
       padding: 40px 20px 80px 20px;
+
+      .nav_logo {
+        display: none;
+      }
+      
       &_section {
         // text-align: center;
         min-width: 0;
