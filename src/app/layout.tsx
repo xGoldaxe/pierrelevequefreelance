@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Agence de production audiovisuelle à paris - Black Stories",
+  title: "Pierre Leveque Developpeur Web",
   description:
-    "Back Stories est une agence de production audiovisuelle basé sur Paris. Notre société vous propose des vidéos d'entreprise, des reportages, du montage et de la photographie.",
+    "Pierre Leveque est un développeur web expert sur React et son écosystème. Code depuis plus de 10 ans et fort d'une expérience professionnelle, il est disponible pour diverses missions en développement et consulting. Ses technologies préférées sont React, javasript, typescript, java, node, gsap, angular, sass, tailwind, sql, mongodb et bien d'autres.",
 };
 
 export default function RootLayout({
