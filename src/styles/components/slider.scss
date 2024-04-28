@@ -4,7 +4,8 @@ $sliderDuration: 80s;
 	position: relative;
 	display: flex;
 	justify-content: flex-start;
-	transform: translateX(-128px);
+	overflow: hidden;
+	width: 100%;
 
 	&__elements {
 		display: flex;
